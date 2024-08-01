@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "NBA Basketball Game Predictor",
-    subtitle: "MERN Stack",
+    subtitle: "Python, Machine Learning, Model Training, Web Scraping",
     description:
       "Developed a Machine Learning-based program in Python to predict NBA game outcomes, demonstrating proficiency in data analysis and model training",
     image: "./project-1.gif",
@@ -36,8 +36,8 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+      "Khadim was a standout fellow at the Headstarter Summer Fellowship. Their enthusiasm and dedication were evident in every project. They tackled complex challenges with a proactive mindset and delivered exceptional results. Their passion and innovation truly shone through.",
+    image: "https://media.licdn.com/dms/image/D4E03AQHhyyJz5y9BQg/profile-displayphoto-shrink_800_800/0/1718285911693?e=1727913600&v=beta&t=pDu0jyhtOQABB1zxjdRURZFatiez8OM_Co8Vyqq3yDY",
     name: "Yasin Ehsan",
     company: "Headstarter",
   },
