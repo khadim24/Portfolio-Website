@@ -50,4 +50,6 @@ export const skills = [
   "C++",
   "Python",
   "Java",
+  "Firebase",
+  "HTML/CSS"
 ];
