@@ -9,19 +9,19 @@ export const projects = [
   },
   {
     title: "Arcade Basketball Game",
-    subtitle: "Java",
+    subtitle: "Java, Game Design",
     description:
       "Designed and developed an arcade basketball game using Java, showcasing strong programming skills and creative game design principles",
     image: "./project-2.gif",
     link: "https://github.com/Mconde13/apcsa_modim_basketball",
   },
   {
-    title: "Project 3",
-    subtitle: "Place Holder",
+    title: "Pantry Tracker",
+    subtitle: "React, Next.js, Mui, Firebase",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Designed and developed a pantry inventory management app using React and Firebase, demonstrating expertise in full-stack development, real-time data synchronization, and user-centric design.",
     image: "./project-3.gif",
-    link: "https://google.com",
+    link: "https://pantry-app-khadim.vercel.app/",
   },
   {
     title: "Project 4",
