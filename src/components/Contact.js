@@ -17,10 +17,12 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    const data = { "form-name": "contact", name, email, message };
+    console.log(data); // Debugging: Log form data to the console.
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
+      body: encode(data),
     })
       .then(() => alert("Message sent!"))
       .catch((error) => alert(error));
