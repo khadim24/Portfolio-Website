@@ -38,8 +38,7 @@ export default function Skills() {
                   {skill}
                 </span>
               </div>
-            </div>
-          ))}
+            </div>   
         </div>
       </div>
     </section>
