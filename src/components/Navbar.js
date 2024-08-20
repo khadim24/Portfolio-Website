@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 
-import { ArrowRightIcon } from "@heroicons/react/solid";
+import { ArrowRightIcon } from "@npm install @heroicons/react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";  // Import LinkedIn and GitHub icons
 import React from "react";
 
