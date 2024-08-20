@@ -1,7 +1,6 @@
-// src/components/Projects.js
-
 import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
+import { motion } from "framer-motion";
 import { projects } from "../data";
 
 export default function Projects() {
@@ -14,24 +13,29 @@ export default function Projects() {
             Apps I've Built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-          Explore my portfolio of projects, where innovation meets dedication. 
-          Each project showcases my skills and passion for technology. 
-          Dive in and see what I've been working on!
+            Explore my portfolio of projects, where innovation meets dedication.
+            Each project showcases my skills and passion for technology.
+            Dive in and see what I've been working on!
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {projects.map((project) => (
-            <a
+          {projects.map((project, index) => (
+            <motion.a
               href={project.link}
               key={project.image}
-              className="sm:w-1/2 w-100 p-4">
+              className="sm:w-1/2 w-100 p-4"
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
               <div className="flex relative">
                 <img
                   alt="gallery"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  className="absolute inset-0 w-full h-full object-cover object-center rounded-md"
                   src={project.image}
                 />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100 rounded-md">
                   <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
                     {project.subtitle}
                   </h2>
@@ -41,7 +45,7 @@ export default function Projects() {
                   <p className="leading-relaxed">{project.description}</p>
                 </div>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>

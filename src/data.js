@@ -1,3 +1,5 @@
+//src/data.js
+
 export const projects = [
   {
     title: "NBA Basketball Game Predictor",

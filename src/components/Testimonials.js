@@ -1,20 +1,26 @@
-// src/components/Testimonials
-
 import React from "react";
 import { TerminalIcon, UsersIcon } from "@heroicons/react/solid";
+import { motion } from "framer-motion";
 import { testimonials } from "../data";
 
 export default function Testimonials() {
   return (
     <section id="testimonials">
       <div className="container px-5 py-10 mx-auto text-center">
-        <UsersIcon className="w-10 inline-block mb-4" />
+        <UsersIcon className="w-10 inline-block mb-4 text-green-400" />
         <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-12">
           Client Testimonials
         </h1>
         <div className="flex flex-wrap m-4">
-          {testimonials.map((testimonial) => (
-            <div className="p-4 md:w-1/2 w-full">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.name}
+              className="p-4 md:w-1/2 w-full"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ scale: 1.03 }}
+            >
               <div className="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
                 <TerminalIcon className="block w-8 text-gray-500 mb-4" />
                 <p className="leading-relaxed mb-6">{testimonial.quote}</p>
@@ -22,7 +28,7 @@ export default function Testimonials() {
                   <img
                     alt="testimonial"
                     src={testimonial.image}
-                    className="w-12 rounded-full flex-shrink-0 object-cover object-center"
+                    className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                   />
                   <span className="flex-grow flex flex-col pl-4">
                     <span className="title-font font-medium text-white">
@@ -34,11 +40,10 @@ export default function Testimonials() {
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 }
-

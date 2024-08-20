@@ -1,11 +1,11 @@
-// src/components/Contact.js
-
-import React from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   function encode(data) {
     return Object.keys(data)
@@ -17,15 +17,24 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
+
     const data = { "form-name": "contact", name, email, message };
-    console.log(data); // Debugging: Log form data to the console.
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(data),
     })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
+      .then(() => {
+        setSubmitted(true);
+        setLoading(false);
+        alert("Message sent!");
+      })
+      .catch((error) => {
+        setLoading(false);
+        alert("There was an error sending your message. Please try again.");
+      });
   }
 
   return (
@@ -54,7 +63,7 @@ export default function Contact() {
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 EMAIL
               </h2>
-              <a className="text-indigo-400 leading-relaxed">
+              <a href="mailto:khadimth1am900@gmail.com" className="text-indigo-400 leading-relaxed">
                 khadimth1am900@gmail.com
               </a>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
@@ -89,6 +98,7 @@ export default function Contact() {
               name="name"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className="relative mb-4">
@@ -101,6 +111,7 @@ export default function Contact() {
               name="email"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="relative mb-4">
@@ -112,14 +123,21 @@ export default function Contact() {
               name="message"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-2 px-4 resize-none leading-6 transition-colors duration-200 ease-in-out"
               onChange={(e) => setMessage(e.target.value)}
+              required
             />
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            disabled={loading}
+            className={`text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg ${
+              loading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            Submit
+            {loading ? "Sending..." : "Submit"}
           </button>
+          {submitted && (
+            <p className="text-green-500 mt-3">Thank you! Your message has been sent.</p>
+          )}
         </form>
       </div>
     </section>
