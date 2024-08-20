@@ -1,9 +1,8 @@
 // src/components/Navbar.js
 
 import { ArrowRightIcon } from "@heroicons/react/solid";
+import { FaLinkedin, FaGithub } from "react-icons/fa";  // Import LinkedIn and GitHub icons
 import React from "react";
-
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -14,7 +13,7 @@ export default function Navbar() {
             Khadim Thiam
           </a>
         </a>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 flex flex-wrap items-center text-base justify-center">
           <a href="#projects" className="mr-5 hover:text-white">
             Past Work
           </a>
@@ -23,6 +22,12 @@ export default function Navbar() {
           </a>
           <a href="#testimonials" className="mr-5 hover:text-white">
             Testimonials
+          </a>
+          <a href="https://www.linkedin.com/in/khadim-thiam-4078191a9" className="mr-5 hover:text-white">
+            <FaLinkedin className="inline-block w-5 h-5 mr-1" /> LinkedIn
+          </a>
+          <a href="https://github.com/khadim24" className="mr-5 hover:text-white">
+            <FaGithub className="inline-block w-5 h-5 mr-1" /> GitHub
           </a>
         </nav>
         <a
