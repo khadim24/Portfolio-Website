@@ -27,8 +27,8 @@ const data = [
     id: 3,
     image: IMG1,
     title: 'Customer Service Chatbot for Healthcare',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps'
+    github: 'https://github.com/khadim24/healthcare-chatsupport',
+    demo: 'https://healthcare-chatsupport.vercel.app/'
   },
   {
     id: 4,
