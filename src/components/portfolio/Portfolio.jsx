@@ -4,7 +4,7 @@ import IMG1 from '../../assets/project-1.gif'
 import IMG2 from '../../assets/project-2.gif'
 import IMG3 from '../../assets/project-3.gif'
 import IMG4 from '../../assets/project-4.gif'
-import IMG5 from '../../assets/portfolio5.png'
+import IMG5 from '../../assets/project-5.gif'
 import IMG6 from '../../assets/portfolio6.jpg'
 
 // DO NOT USE THE IMAGES IN PRODUCTION
@@ -12,20 +12,20 @@ import IMG6 from '../../assets/portfolio6.jpg'
 const data = [
   {
     id: 1,
-    image: IMG2,
+    image: IMG1,
     title: 'Arcade Basketball Game',
     github: 'https://github.com/Mconde13/apcsa_modim_basketball',
   },
   {
     id: 2,
-    image: IMG3,
+    image: IMG2,
     title: 'Pantry Management Application',
     github: 'https://github.com/khadim24/Pantry-App',
     demo: 'https://pantry-app-khadim.vercel.app/'
   },
   {
     id: 3,
-    image: IMG1,
+    image: IMG3,
     title: 'Customer Service Chatbot for Healthcare',
     github: 'https://github.com/khadim24/healthcare-chatsupport',
     demo: 'https://healthcare-chatsupport.vercel.app/'
