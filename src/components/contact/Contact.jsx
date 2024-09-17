@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './contact.css';
 import { BsLinkedin } from 'react-icons/bs';
+import { MdEmail } from 'react-icons/md'; // Import email icon
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -31,8 +32,17 @@ const Contact = () => {
             <h5>Khadim Thiam</h5>
             <a href="https://www.linkedin.com/in/khadim-thiam-4078191a9/" target="_blank" rel="noopener noreferrer">Send a message</a>
           </article>
+          
+          {/* Email Option */}
+          <article className="contact__option">
+            <MdEmail className='contact__option-icon' />
+            <h4>Email</h4>
+            <h5>khadimth1am900@gmail.com</h5>
+            <a href="mailto:khadimth1am900@gmail.com">Send a message</a>
+          </article>
         </div>
         {/* END OF CONTACT OPTIONS */}
+
         {submitted ? (
           <p>Thank you for your message! I'll get back to you soon.</p>
         ) : (

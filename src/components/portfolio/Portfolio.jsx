@@ -19,7 +19,7 @@ const data = [
   {
     id: 2,
     image: IMG2,
-    title: 'Pantry Management Application',
+    title: 'Full Stack Pantry Management Application',
     github: 'https://github.com/khadim24/Pantry-App',
     demo: 'https://pantry-app-khadim.vercel.app/'
   },
@@ -33,14 +33,14 @@ const data = [
   {
     id: 4,
     image: IMG4,
-    title: 'Placeholder',
+    title: 'Full Stack AI Flashcards with Stripe Integration and Secure Sign-In',
     github: 'https://github.com',
     demo: 'https://dribbble.com/shots/16955822-Maintaining-tasks-and-tracking-progress'
   },
   {
     id: 5,
     image: IMG5,
-    title: 'Placeholder',
+    title: 'Machine Learning NBA Game Winner Predictor',
     github: 'https://github.com',
     demo: 'https://dribbble.com/shots/16541289-Orion-UI-kit-Charts-templates-infographics-in-Figma'
   },
